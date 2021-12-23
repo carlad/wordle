@@ -1,6 +1,6 @@
 This is a Python module to help solve the [Wordle](https://www.powerlanguage.co.uk/wordle/) daily puzzle.
 
-To use the module run python in the same directory and `import wordle`
+To use the module run a python interpreter in the same directory and `import wordle`
 
 Requires `python 3.8.6`
 
