@@ -8,13 +8,14 @@ Usage:
 
 `import wordle`
 
-### Select a random 5 letter word
-Useful if you can't think of where to start.
+#### Select a random 5 letter word
+Useful if you can't think of where to start:
+
 `wordle.select()`
 
-### Find possible words that match known letters
-Uses regexp search to match a string of known letters to possible words.
+#### Find possible words that match known letters
+Uses regexp search to match a string of known letters to possible words.\
 Any unknown letters must be represented with a fullstop `.`
 
-e.g. `wordle.find(".d.yh")`
+e.g. `wordle.find(".d.y.")`\
 will return `['adits', 'adyta', 'edits']`
