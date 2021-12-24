@@ -13,9 +13,22 @@ Useful if you can't think of where to start:
 
 `wordle.select()`
 
-#### Find possible words that match known letters
-Uses regexp search to match a string of known letters to possible words.\
-Any unknown letters must be represented with a fullstop `.`
+#### Find possible words matching letters of known and unknown positions
+Uses regexp search to match a string of known-position letters to possible\ words. Any unknown letters must be represented with a fullstop `.`
 
-e.g. `wordle.find(".d.y.")`\
+e.g. `wordle.find(".d.t.")`\
 will return `['adits', 'adyta', 'edits']`
+
+The `find` method also takes an optional additional string argument of\
+unknown-position letters.
+
+e.g. `wordle.find(".at..", "bs")`\
+will return `['bates', 'baths', 'batts']`
+
+
+#### Find words that contain every letter
+This works like an anagram finder. It takes a string of 5 letters and\
+returns a list of words that contain each letter of the string:
+
+e.g. `wordle.anagram("astte")`\
+will return `['etats', 'state', 'taste', 'tates', 'teats', 'testa']`
