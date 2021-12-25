@@ -14,8 +14,13 @@ Useful if you can't think of where to start:
 `wordle.select_random()`
 
 #### Find possible words matching letters
-`wordle.find(regex_str, Opt[included_letters_str], Opt[excluded_letters_str])`
-Takes three positional arguments:
+`wordle.find(
+    regex_str, 
+    Opt[included_letters_str], 
+    Opt[excluded_letters_str],
+    Opt[word_list])`
+
+Takes up to four positional arguments:
 - A string that uses a regular expression search to match a string of known-position letters. Any unknown letters must be represented with a fullstop `.`
 
 e.g. `wordle.find(".d.t.")`\
@@ -30,6 +35,11 @@ will return `['bates', 'baths', 'batts']`
 
 e.g `wordle.find(".e.ry", None, "bphotndiksva")`\
 will return `['ferry', 'jerry', 'leery', 'merry', 'refry']`
+
+- A list of words
+By default Wordle uses a dictionary of five letter words defined in the\
+`constants.py` as FIVE_LETTER_WORDS. It is possible to pass in a custom\
+list as a fourth argument.
 
 #### Remove words that do not contain letters.
 `wordle.remove(regex_string, word_list)`
